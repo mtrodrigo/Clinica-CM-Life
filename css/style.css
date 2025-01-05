@@ -14,8 +14,6 @@ header{
 .topo{
     max-width: 1024px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
     align-items: center;
     justify-content: space-around;
     margin: 0 auto;
@@ -29,26 +27,31 @@ header{
     color: #fff;
     padding-right: 20px;
 }
-.topo-links, .especialidades-link a:hover{
+.topo-links a:hover, .especialidades-link a:hover{
     color: rgb(12, 110, 113);
 }
 .home{
     height: 100vh;
     width: 100%;
     background-image: url(../assets/recepcao.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
 
 }
 .home-texto{
-    width: 1024px;
-    margin: 0 auto;   
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+    font-size: 26px;
+    text-align: center;  
 }
 .home-texto h1{
     color: #fff;
-    font-size: 40px;
     font-weight: 500;
 }
 .sobre{
@@ -96,9 +99,7 @@ header{
 }
 .especialidades-img img{
     width: 100%;
-    padding-bottom: 20px;
-    
-    
+    padding-bottom: 20px;  
 }
 .especialidades-img figure{
     margin-bottom: 30px;
@@ -150,4 +151,26 @@ footer{
 .footer-texto a:hover{
     color: rgb(0, 202, 209);
 }
+@media (max-width: 425px) {
+    .topo{
+        flex-direction: column;
+    }
+    .topo-links{
+        border-top: 1px solid rgb(12, 110, 113);
+        padding-top: 10px;
+    }
+    .home{;
+        background-position: center;
+    }
+    .home-texto{
+        max-width: 425px;   
+    }
+    .sobre-img{
+        display: none;
+    }
+    .sobre-list h2{
+        padding-left: 20px;
+    }  
+}
+
 
